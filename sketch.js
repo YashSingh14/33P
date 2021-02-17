@@ -68,8 +68,9 @@ function draw() {
    }
    if(frameCount%60===0){
      particles.push(new Particle(random(width/2-30, width/2+30), 10,10));
-     score++;
      count++;
+     score++;
+     
    }
 
  
@@ -89,6 +90,8 @@ function draw() {
      fill("red")
      text("GAME OVER", 200, 300)
      gameState= "end";
+     particles = [];
+     score = 0;
    }
 
    if(gameState !== "end"){
